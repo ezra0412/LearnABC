@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Learn">
+
+    <ImageView
+        android:id="@+id/bg_brown_learn"
+        android:layout_width="422dp"
+        android:layout_height="123dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/brown_bg" />
+
+    <ImageView
+        android:id="@+id/bg_bb_learn"
+        android:layout_width="425dp"
+        android:layout_height="642dp"
+        app:layout_constraintBottom_toTopOf="@+id/bg_brown_learn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/whiteboard_bg_learn" />
+
+    <TextView
+        android:id="@+id/tv_tittle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Letter"
+        android:textColor="@android:color/white"
+        android:textSize="44sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_bb_learn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bg_bb_learn"
+        app:layout_constraintTop_toTopOf="@+id/bg_bb_learn"
+        app:layout_constraintVertical_bias="0.045" />
+
+    <TextView
+        android:id="@+id/tv_letter_learn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="playLetter"
+        android:text="A"
+        android:textSize="160sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_bb_learn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="@+id/bg_bb_learn"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.089999974" />
+
+    <TextView
+        android:id="@+id/tv_itemName_learn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="playItemFor"
+        android:text="Apple"
+        android:textColor="@android:color/white"
+        android:textSize="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_bb_learn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/bg_bb_learn"
+        app:layout_constraintTop_toBottomOf="@+id/img_item_learn"
+        app:layout_constraintVertical_bias="0.212" />
+
+    <ImageView
+        android:id="@+id/img_item_learn"
+        android:layout_width="247dp"
+        android:layout_height="206dp"
+        android:clickable="true"
+        android:onClick="playItem"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_bb_learn"
+        app:layout_constraintEnd_toEndOf="@+id/bg_bb_learn"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="@+id/bg_bb_learn"
+        app:layout_constraintTop_toTopOf="@+id/bg_bb_learn"
+        app:layout_constraintVertical_bias="0.552"
+        app:srcCompat="@drawable/apple" />
+
+    <ImageView
+        android:id="@+id/img_homeBt_learn"
+        android:layout_width="90dp"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bg_brown_learn"
+        app:layout_constraintStart_toStartOf="@+id/bg_brown_learn"
+        app:layout_constraintTop_toTopOf="@+id/bg_brown_learn"
+        app:layout_constraintVertical_bias="0.64"
+        app:srcCompat="@drawable/home_bt" />
+
+    <ImageView
+        android:id="@+id/img_backBT_learn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/bg_brown_learn"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/bg_brown_learn"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/back_bt" />
+
+    <ImageView
+        android:id="@+id/img_nextBT_learn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:onClick="next"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_brown_learn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="@+id/bg_brown_learn"
+        app:layout_constraintTop_toTopOf="@+id/bg_brown_learn"
+        app:layout_constraintVertical_bias="0.6"
+        app:srcCompat="@drawable/next_bt" />
+
+    <TextView
+        android:id="@+id/tv_questionNUM_test"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="44dp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_tittle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.088"
+        app:layout_constraintStart_toEndOf="@+id/tv_tittle" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
