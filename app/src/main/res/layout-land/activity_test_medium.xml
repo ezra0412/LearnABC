@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test_medium">
+
+    <ImageView
+        android:id="@+id/imageView14"
+        android:layout_width="458dp"
+        android:layout_height="471dp"
+        android:src="@drawable/whiteboard_bg_test_lanscape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <TextView
+        android:id="@+id/tv_question_explain_testMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/question_bg"
+        android:gravity="center_vertical"
+        android:text="What's the missing letter?"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.569"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.305" />
+
+    <ImageView
+        android:id="@+id/bt_playQuestion_testMedium"
+        android:layout_width="52dp"
+        android:layout_height="42dp"
+        android:clickable="true"
+        android:onClick="playQuestion"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question_explain_testMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.894"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/speaker_bt" />
+
+    <Button
+        android:id="@+id/bt_ans1_testMedium"
+        android:layout_width="139dp"
+        android:layout_height="66dp"
+        android:background="@drawable/test_ans_bt"
+        android:onClick="button1"
+        android:text="C"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question_explain_testMedium"
+        app:layout_constraintVertical_bias="0.125" />
+
+    <Button
+        android:id="@+id/bt_ans2_testMedium"
+        android:layout_width="139dp"
+        android:layout_height="66dp"
+        android:background="@drawable/test_ans_bt"
+        android:onClick="button2"
+        android:text="A"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toEndOf="@+id/imageView14"
+        app:layout_constraintTop_toBottomOf="@+id/bt_ans1_testMedium"
+        app:layout_constraintVertical_bias="0.467" />
+
+    <Button
+        android:id="@+id/bt_ans4_testMedium"
+        android:layout_width="139dp"
+        android:layout_height="66dp"
+        android:background="@drawable/test_ans_bt"
+        android:onClick="button4"
+        android:text="E"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans2_testMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toEndOf="@+id/bt_ans2_testMedium" />
+
+    <Button
+        android:id="@+id/bt_ans3_testMedium"
+        android:layout_width="139dp"
+        android:layout_height="66dp"
+        android:background="@drawable/test_ans_bt"
+        android:onClick="button3"
+        android:text="D"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans1_testMedium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.692"
+        app:layout_constraintStart_toEndOf="@+id/bt_ans1_testMedium" />
+
+
+    <TextView
+        android:id="@+id/tv_question_title_testMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintHorizontal_bias="0.48"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.094" />
+
+    <TextView
+        android:id="@+id/tv_question_num_testMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_question_title_testMedium"
+        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_question_title_testMedium" />
+
+    <ImageView
+        android:id="@+id/img_hint_Item_testMedium"
+        android:layout_width="210dp"
+        android:layout_height="175dp"
+        android:clickable="true"
+        android:onClick="playItem"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView14"
+        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question_title_testMedium"
+        app:layout_constraintVertical_bias="0.288"
+        app:srcCompat="@drawable/apple" />
+
+    <TextView
+        android:id="@+id/tv_question_testMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="_pple"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView14"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_hint_Item_testMedium"
+        app:layout_constraintVertical_bias="0.411" />
+
+    <ImageView
+        android:id="@+id/bt_back_testMedium"
+        android:layout_width="41dp"
+        android:layout_height="28dp"
+        android:onClick="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_question_title_testMedium"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.110000014"
+        app:srcCompat="@drawable/arrow" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

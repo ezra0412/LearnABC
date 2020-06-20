@@ -2,6 +2,7 @@ package com.example.learnabc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
@@ -18,7 +19,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Test_medium extends AppCompatActivity {
-    MediaPlayer itemSound, question;
+    MediaPlayer itemSound, question,correct,incorrect;
     ImageView item;
     TextView itemName, questionNum;
     Button bt1, bt2, bt3, bt4;
@@ -26,27 +27,30 @@ public class Test_medium extends AppCompatActivity {
     int[] randomQ = new int[26];
     boolean answerMade = false;
     static char answerChar;
+    Dialog myDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_medium);
-
-        itemName = findViewById(R.id.tv_question_testEasy);
-        item = findViewById(R.id.img_hint_Item_testEasy);
-        bt1 = findViewById(R.id.bt_ans1_testEasy);
-        bt2 = findViewById(R.id.bt_ans2_testEasy);
-        bt3 = findViewById(R.id.bt_ans3_testEasy);
-        bt4 = findViewById(R.id.bt_ans4_testEasy);
-        questionNum = findViewById(R.id.tv_question_num_testEasy);
+        myDialog = new Dialog(this);
+        correct=MediaPlayer.create(this,R.raw.correct);
+        incorrect=MediaPlayer.create(this,R.raw.incorrect);
+        itemName = findViewById(R.id.tv_question_testMedium);
+        item = findViewById(R.id.img_hint_Item_testMedium);
+        bt1 = findViewById(R.id.bt_ans1_testMedium);
+        bt2 = findViewById(R.id.bt_ans2_testMedium);
+        bt3 = findViewById(R.id.bt_ans3_testMedium);
+        bt4 = findViewById(R.id.bt_ans4_testMedium);
+        questionNum = findViewById(R.id.tv_question_num_testMedium);
         question = MediaPlayer.create(this, R.raw.question);
 
         ArrayList<Integer> randQL = new ArrayList<Integer>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 26; i++) {
             randQL.add(i, i + 1);
         }
         Collections.shuffle(randQL);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 26; i++) {
             randomQ[i] = randQL.get(i);
         }
         test();
@@ -1331,7 +1335,8 @@ public class Test_medium extends AppCompatActivity {
     public void playItem(View view) {
         itemSound.start();
     }
-
+    public void playCorrect(){correct.start();}
+    public void playIncorrect(){incorrect.start();}
     public void test() {
         counter++;
 
@@ -1339,11 +1344,11 @@ public class Test_medium extends AppCompatActivity {
             checkAns();
         }
 
-        if (counter == 11) {
+        if (counter == 27) {
             Intent intent = new Intent(Test_medium.this, Result.class);
             intent.putExtra("result", answerCorrectly);
             startActivityForResult(intent, 1);
-        } else if (counter <= 10) {
+        } else if (counter <= 26) {
             questionNum.setText(counter + "");
 
 
@@ -1512,7 +1517,7 @@ public class Test_medium extends AppCompatActivity {
     public void checkAns() {
         if (answer == choice) {
             ++answerCorrectly;
-
+            playCorrect();
             final LodingScreen lodingScreen = new LodingScreen(Test_medium.this);
             lodingScreen.startLodingDialog();
             Handler handler = new Handler();
@@ -1527,22 +1532,43 @@ public class Test_medium extends AppCompatActivity {
 
         //Return value error, other ok, verification need double check
         else if (answer != choice) {
-            final LodingScreenWrong lodingScreen = new LodingScreenWrong(Test_medium.this);
-            lodingScreen.startLodingDialog();
+            playIncorrect();
+            TextView correcrtAnsert;
+            myDialog.setContentView(R.layout.activity_wrong_answer);
+            correcrtAnsert = (TextView) myDialog.findViewById(R.id.tv_ans);
+            correcrtAnsert.setText(answerChar+"");
+            myDialog.show();
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    lodingScreen.dissmissDialog();
-
+                    myDialog.dismiss();
                 }
-            }, 1000);
+            }, 5000);
         }
     }
 
     public void back(View view) {
-        super.onBackPressed();
+        final Quite lodingScreen = new Quite(Test_medium.this);
+        lodingScreen.startLodingDialog();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                lodingScreen.dissmissDialog();
+
+            }
+        }, 2000);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                Intent i=new Intent(Test_medium.this,Level.class);
+                startActivity(i);
+            }
+        }, 2000);
 
     }
+
 
 }

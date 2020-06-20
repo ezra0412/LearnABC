@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Score_board_easy">
+
+    <ImageView
+        android:id="@+id/img_scoreBoard_background_easy"
+        android:layout_width="800dp"
+        android:layout_height="471dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bg_result_landscape" />
+
+    <TextView
+        android:id="@+id/tv_scoreBord_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score board easy"
+        android:textColor="@color/White"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/img_scoreBoard_background_easy"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.044" />
+
+    <ImageView
+        android:id="@+id/img_championCup_easy"
+        android:layout_width="182dp"
+        android:layout_height="171dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/br_back_easy"
+        app:layout_constraintVertical_bias="0.34"
+        app:srcCompat="@drawable/champion_cup" />
+
+    <ImageView
+        android:id="@+id/bg_score3_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/img_scoreBoard_background_easy"
+        app:layout_constraintHorizontal_bias="0.816"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_score2_easy"
+        app:layout_constraintVertical_bias="0.369"
+        app:srcCompat="@drawable/rank3" />
+
+    <ImageView
+        android:id="@+id/bg_score2_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bg_score1_easy"
+        app:layout_constraintVertical_bias="0.188"
+        app:srcCompat="@drawable/rank2" />
+
+    <ImageView
+        android:id="@+id/img_silver_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toEndOf="@+id/img_championCup_easy"
+        app:layout_constraintTop_toBottomOf="@+id/img_gold_easy"
+        app:layout_constraintVertical_bias="0.176"
+        app:srcCompat="@drawable/silver" />
+
+    <ImageView
+        android:id="@+id/bg_score1_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.815"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.274"
+        app:srcCompat="@drawable/rank1" />
+
+    <ImageView
+        android:id="@+id/img_gold_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toEndOf="@+id/img_championCup_easy"
+        app:layout_constraintTop_toBottomOf="@+id/tv_scoreBord_easy"
+        app:layout_constraintVertical_bias="0.023"
+        app:srcCompat="@drawable/gold" />
+
+    <TextView
+        android:id="@+id/tv_place_1_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player  ()"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_score_1_easy"
+        app:layout_constraintEnd_toEndOf="@+id/bg_score1_easy"
+        app:layout_constraintStart_toStartOf="@+id/bg_score1_easy"
+        app:layout_constraintTop_toTopOf="@+id/bg_score1_easy"
+        app:layout_constraintVertical_bias="0.461" />
+
+    <TextView
+        android:id="@+id/tv_score_1_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_score1_easy"
+        app:layout_constraintEnd_toEndOf="@+id/bg_score1_easy"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/bg_score1_easy"
+        app:layout_constraintTop_toTopOf="@+id/bg_score1_easy"
+        app:layout_constraintVertical_bias="0.847" />
+
+    <TextView
+        android:id="@+id/tv_place_2_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Player  ()"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_score_2_easy"
+        app:layout_constraintEnd_toEndOf="@+id/bg_score2_easy"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="@+id/bg_score2_easy"
+        app:layout_constraintTop_toTopOf="@+id/bg_score2_easy"
+        app:layout_constraintVertical_bias="0.692" />
+
+    <TextView
+        android:id="@+id/tv_score_2_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_score2_easy"
+        app:layout_constraintEnd_toEndOf="@+id/bg_score2_easy"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/bg_score2_easy"
+        app:layout_constraintTop_toTopOf="@+id/bg_score2_easy"
+        app:layout_constraintVertical_bias="0.847" />
+
+    <ImageView
+        android:id="@+id/img_copper_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.259"
+        app:layout_constraintStart_toEndOf="@+id/img_championCup_easy"
+        app:layout_constraintTop_toBottomOf="@+id/tv_scoreBord_easy"
+        app:layout_constraintVertical_bias="0.787"
+        app:srcCompat="@drawable/copper" />
+
+    <TextView
+        android:id="@+id/tv_score_3_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Score:"
+        android:textColor="@android:color/white"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="@+id/bg_score3_easy"
+        app:layout_constraintEnd_toEndOf="@+id/bg_score3_easy"
+        app:layout_constraintHorizontal_bias="0.492"
+        app:layout_constraintStart_toStartOf="@+id/bg_score3_easy"
+        app:layout_constraintTop_toTopOf="@+id/bg_score3_easy"
+        app:layout_constraintVertical_bias="0.844" />
+
+    <TextView
+        android:id="@+id/tv_place_3_easy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="home"
+        android:text="Player  ()"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_score_3_easy"
+        app:layout_constraintEnd_toEndOf="@+id/bg_score3_easy"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="@+id/bg_score3_easy"
+        app:layout_constraintTop_toTopOf="@+id/bg_score3_easy"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/br_back_easy"
+        android:layout_width="34dp"
+        android:layout_height="31dp"
+        android:onClick="home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_scoreBord_easy"
+        app:layout_constraintHorizontal_bias="0.46"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06999999"
+        app:srcCompat="@drawable/arrow" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="93dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="88dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="77dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

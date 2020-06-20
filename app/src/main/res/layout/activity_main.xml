@@ -8,13 +8,14 @@
 
     <ImageView
         android:id="@+id/img_bg"
-        android:layout_width="453dp"
-        android:layout_height="762dp"
+        android:layout_width="719dp"
+        android:layout_height="872dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.013"
         app:srcCompat="@drawable/main_pg_bg" />
 
     <TextView
@@ -34,22 +35,10 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.339" />
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="64dp"
-        android:layout_height="51dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.957"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.977"
-        app:srcCompat="@drawable/setting" />
-
     <Button
         android:id="@+id/bt_start"
-        android:layout_width="274dp"
-        android:layout_height="76dp"
+        android:layout_width="310dp"
+        android:layout_height="86dp"
         android:background="@drawable/start"
         android:onClick="startLearning"
         android:text="Learning "
@@ -65,8 +54,8 @@
 
     <Button
         android:id="@+id/bt_test"
-        android:layout_width="277dp"
-        android:layout_height="57dp"
+        android:layout_width="313dp"
+        android:layout_height="68dp"
         android:background="@drawable/test_bt"
         android:onClick="startTest"
         android:text="Test"
@@ -75,10 +64,10 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.503"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/bt_start"
-        app:layout_constraintVertical_bias="0.047" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
         android:id="@+id/img_player"
@@ -111,9 +100,9 @@
         android:layout_width="52dp"
         android:layout_height="57dp"
         android:onClick="scoreBoard"
-        app:layout_constraintBottom_toTopOf="@+id/imageView4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintHorizontal_bias="0.96"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.99"

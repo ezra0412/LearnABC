@@ -8,8 +8,10 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="413dp"
-        android:layout_height="734dp"
+        android:layout_width="512dp"
+        android:layout_height="812dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/whiteboard_bg_result" />

@@ -2,13 +2,7 @@ package com.example.learnabc;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.os.Bundle;
 import android.view.LayoutInflater;
-import android.widget.TextView;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 
 
 class LodingScreenWrong {

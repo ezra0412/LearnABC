@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Test">
+    tools:context=".Test_easy">
 
     <ImageView
         android:id="@+id/bt_question"
@@ -47,6 +47,20 @@
         app:srcCompat="@drawable/speaker_bt" />
 
     <Button
+        android:id="@+id/bt_ans1_testEasy"
+        android:layout_width="139dp"
+        android:layout_height="66dp"
+        android:background="@drawable/test_ans_bt"
+        android:onClick="button1"
+        android:text="C"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans2_testEasy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/bt_ans2_testEasy"
         android:layout_width="139dp"
         android:layout_height="66dp"
@@ -60,7 +74,7 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toEndOf="@+id/bt_ans1_testEasy"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.84" />
+        app:layout_constraintVertical_bias="0.859" />
 
     <Button
         android:id="@+id/bt_ans4_testEasy"
@@ -76,7 +90,7 @@
         app:layout_constraintHorizontal_bias="0.776"
         app:layout_constraintStart_toEndOf="@+id/bt_ans3_testEasy"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.96" />
+        app:layout_constraintVertical_bias="0.979" />
 
     <Button
         android:id="@+id/bt_ans3_testEasy"
@@ -88,20 +102,6 @@
         android:textColor="@android:color/white"
         android:textSize="36sp"
         app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans4_testEasy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.12"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/bt_ans1_testEasy"
-        android:layout_width="139dp"
-        android:layout_height="66dp"
-        android:background="@drawable/test_ans_bt"
-        android:onClick="button1"
-        android:text="C"
-        android:textColor="@android:color/white"
-        android:textSize="36sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans2_testEasy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent" />

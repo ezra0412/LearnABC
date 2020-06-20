@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import static com.example.learnabc.Level.getLevel;
 import static com.example.learnabc.MainActivity.getCurrerntPlayer;
 import static com.example.learnabc.MainActivity.player1;
 import static com.example.learnabc.MainActivity.player2;
@@ -50,30 +51,80 @@ public class Result extends AppCompatActivity {
     public void done(View view){
         String name= mName.getText().toString();
         if(getCurrerntPlayer()==1){
-            player1.setCorrectAns(result);
             player1.setPlayerName(name);
             player.setText("Player 1");
+            if (getLevel()==1){
+                player1.setScoreEasy(result);
+                startActivity(new Intent(this,Score_board_easy.class));
+            }
+            else if(getLevel()==2){
+                player1.setScoreMedium(result);
+                startActivity(new Intent(this,Score_board_medium.class));
+            }
+            else {
+                player1.setScoreHard(result);
+                startActivity(new Intent(this,Score_board_hard.class));
+
+            }
         }
         else if(getCurrerntPlayer()==2){
-            player2.setCorrectAns(result);
             player2.setPlayerName(name);
             player.setText("Player 2");
+            if (getLevel()==1){
+                player2.setScoreEasy(result);
+                startActivity(new Intent(this,Score_board_easy.class));
+
+            }
+            else if(getLevel()==2){
+                player2.setScoreMedium(result);
+                startActivity(new Intent(this,Score_board_medium.class));
+            }
+            else {
+                player2.setScoreHard(result);
+                startActivity(new Intent(this,Score_board_hard.class));
+
+            }
 
         }
         else if(getCurrerntPlayer()==3){
-            player3.setCorrectAns(result);
             player3.setPlayerName(name);
             player.setText("Player 3");
+            if (getLevel()==1){
+                player3.setScoreEasy(result);
+                startActivity(new Intent(this,Score_board_easy.class));
 
+            }
+            else if(getLevel()==2){
+                player3.setScoreMedium(result);
+                startActivity(new Intent(this,Score_board_medium.class));
+
+            }
+            else {
+                player3.setScoreHard(result);
+                startActivity(new Intent(this,Score_board_hard.class));
+
+            }
         }
         else if(getCurrerntPlayer()==4){
-            player4.setCorrectAns(result);
             player4.setPlayerName(name);
             player.setText("Player 4");
+            if (getLevel()==1){
+                player4.setScoreEasy(result);
+                startActivity(new Intent(this,Score_board_easy.class));
 
+            }
+            else if(getLevel()==2){
+                player4.setScoreMedium(result);
+                startActivity(new Intent(this,Score_board_medium.class));
+
+            }
+            else {
+                player4.setScoreHard(result);
+                startActivity(new Intent(this,Score_board_hard.class));
+
+            }
         }
 
-        startActivity(new Intent(this,ScoreBoard.class));
     }
 
 }

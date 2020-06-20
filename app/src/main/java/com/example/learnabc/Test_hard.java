@@ -2,13 +2,11 @@ package com.example.learnabc;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
-import android.text.SpannableString;
-import android.text.Spanned;
-import android.text.style.UnderlineSpan;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -17,32 +15,35 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class Test_hard extends AppCompatActivity {
-    MediaPlayer character, question;
+    MediaPlayer character, question,correct,incorrect;
     TextView  questionNum;
     Button bt1, bt2, bt3, bt4;
     int num1, num2, num3, randA, choice, answer, counter = 0, answerCorrectly;
     int[] randomQ = new int[26];
     boolean answerMade = false;
     static char answerChar;
+    Dialog myDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_hard);
-
+        correct=MediaPlayer.create(this,R.raw.correct);
+        incorrect=MediaPlayer.create(this,R.raw.incorrect);
+        myDialog = new Dialog(this);
         bt1 = findViewById(R.id.bt_ans1_testEasy);
         bt2 = findViewById(R.id.bt_ans2_testEasy);
         bt3 = findViewById(R.id.bt_ans3_testEasy);
         bt4 = findViewById(R.id.bt_ans4_testEasy);
         questionNum = findViewById(R.id.tv_question_num_testEasy);
-        question = MediaPlayer.create(this, R.raw.question);
+        question = MediaPlayer.create(this, R.raw.hard_question);
 
         ArrayList<Integer> randQL = new ArrayList<Integer>();
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 26; i++) {
             randQL.add(i, i + 1);
         }
         Collections.shuffle(randQL);
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 26; i++) {
             randomQ[i] = randQL.get(i);
         }
         test();
@@ -1147,7 +1148,8 @@ public class Test_hard extends AppCompatActivity {
     public void playChar(View view) {
         character.start();
     }
-
+    public void playCorrect(){correct.start();}
+    public void playIncorrect(){incorrect.start();}
     public void test() {
         counter++;
 
@@ -1155,11 +1157,11 @@ public class Test_hard extends AppCompatActivity {
             checkAns();
         }
 
-        if (counter == 11) {
+        if (counter == 27) {
             Intent intent = new Intent(Test_hard.this, Result.class);
             intent.putExtra("result", answerCorrectly);
             startActivityForResult(intent, 1);
-        } else if (counter <= 10) {
+        } else if (counter <= 26) {
             questionNum.setText(counter + "");
 
 
@@ -1328,7 +1330,7 @@ public class Test_hard extends AppCompatActivity {
     public void checkAns() {
         if (answer == choice) {
             ++answerCorrectly;
-
+            playCorrect();
             final LodingScreen lodingScreen = new LodingScreen(Test_hard.this);
             lodingScreen.startLodingDialog();
             Handler handler = new Handler();
@@ -1343,22 +1345,42 @@ public class Test_hard extends AppCompatActivity {
 
         //Return value error, other ok, verification need double check
         else if (answer != choice) {
-            final LodingScreenWrong lodingScreen = new LodingScreenWrong(Test_hard.this);
-            lodingScreen.startLodingDialog();
+            playIncorrect();
+            TextView correcrtAnsert;
+            myDialog.setContentView(R.layout.activity_wrong_answer);
+            correcrtAnsert = (TextView) myDialog.findViewById(R.id.tv_ans);
+            correcrtAnsert.setText(answerChar+"");
+            myDialog.show();
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    lodingScreen.dissmissDialog();
-
+                    myDialog.dismiss();
                 }
-            }, 1000);
+            }, 5000);
         }
     }
 
     public void back(View view) {
-        super.onBackPressed();
+        final Quite lodingScreen = new Quite(Test_hard.this);
+        lodingScreen.startLodingDialog();
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                lodingScreen.dissmissDialog();
 
+            }
+        }, 9000);
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                Intent i=new Intent(Test_hard.this,Level.class);
+                startActivity(i);
+            }
+        }, 2000);
     }
 
 }

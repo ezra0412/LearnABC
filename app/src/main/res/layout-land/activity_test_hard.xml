@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test_hard">
+
+    <ImageView
+        android:id="@+id/imageView13"
+        android:layout_width="458dp"
+        android:layout_height="471dp"
+        android:src="@drawable/whiteboard_bg_test_lanscape"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tv_question_explain_testEasy"
+        android:layout_width="312dp"
+        android:layout_height="35dp"
+        android:background="@drawable/question_bg"
+        android:gravity="center_horizontal|center_vertical"
+        android:text="Listen then choose the letter"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.294" />
+
+    <Button
+        android:id="@+id/bt_ans3_testEasy"
+        android:layout_width="139dp"
+        android:layout_height="66dp"
+        android:background="@drawable/test_ans_bt"
+        android:onClick="button3"
+        android:text="D"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/bt_ans1_testEasy"
+        app:layout_constraintVertical_bias="0.503" />
+
+    <Button
+        android:id="@+id/bt_ans1_testEasy"
+        android:layout_width="139dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:background="@drawable/test_ans_bt"
+        android:onClick="button1"
+        android:text="C"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintTop_toBottomOf="@+id/tv_question_explain_testEasy"
+        app:layout_constraintVertical_bias="0.174" />
+
+    <Button
+        android:id="@+id/bt_ans2_testEasy"
+        android:layout_width="137dp"
+        android:layout_height="68dp"
+        android:background="@drawable/test_ans_bt"
+        android:onClick="button2"
+        android:text="A"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans1_testEasy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toEndOf="@+id/bt_ans1_testEasy" />
+
+    <Button
+        android:id="@+id/bt_ans4_testEasy"
+        android:layout_width="139dp"
+        android:layout_height="66dp"
+        android:background="@drawable/test_ans_bt"
+        android:onClick="button4"
+        android:text="E"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans3_testEasy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.771"
+        app:layout_constraintStart_toEndOf="@+id/bt_ans3_testEasy" />
+
+    <ImageView
+        android:id="@+id/bt_playQuestion_testEasy"
+        android:layout_width="52dp"
+        android:layout_height="42dp"
+        android:clickable="true"
+        android:onClick="playQuestion"
+        app:layout_constraintBottom_toTopOf="@+id/tv_question_explain_testEasy"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintStart_toEndOf="@+id/imageView13"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.909"
+        app:srcCompat="@drawable/speaker_bt" />
+
+    <TextView
+        android:id="@+id/tv_question_title_testEasy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Question"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.088" />
+
+    <TextView
+        android:id="@+id/tv_question_num_testEasy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_question_title_testEasy"
+        app:layout_constraintEnd_toStartOf="@+id/guideline10"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/tv_question_title_testEasy" />
+
+    <ImageView
+        android:id="@+id/bt_back_testMedium"
+        android:layout_width="41dp"
+        android:layout_height="28dp"
+        android:onClick="back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_question_title_testEasy"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.116"
+        app:srcCompat="@drawable/arrow" />
+
+    <ImageView
+        android:id="@+id/tv_speakQuestion_TestHard"
+        android:layout_width="218dp"
+        android:layout_height="230dp"
+        android:clickable="true"
+        android:onClick="playChar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406"
+        app:srcCompat="@drawable/question_button" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="57dp" />
+
+    <ImageView
+        android:id="@+id/imageView16"
+        android:layout_width="34dp"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView17"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_speakQuestion_TestHard"
+        app:srcCompat="@drawable/chalk_arrow" />
+
+    <ImageView
+        android:id="@+id/imageView17"
+        android:layout_width="293dp"
+        android:layout_height="34dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView13"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.886"
+        app:srcCompat="@drawable/insctruction" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

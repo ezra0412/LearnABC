@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Test">
+    tools:context=".Test_medium">
 
     <ImageView
         android:id="@+id/bt_question"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/blackboard_test_bg" />
 
     <TextView
-        android:id="@+id/tv_question_explain_testEasy"
+        android:id="@+id/tv_question_explain_testMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/question_bg"
@@ -33,7 +33,7 @@
         app:layout_constraintVertical_bias="0.06" />
 
     <ImageView
-        android:id="@+id/bt_playQuestion_testEasy"
+        android:id="@+id/bt_playQuestion_testMedium"
         android:layout_width="52dp"
         android:layout_height="42dp"
         android:clickable="true"
@@ -41,13 +41,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
-        app:layout_constraintStart_toEndOf="@+id/tv_question_explain_testEasy"
+        app:layout_constraintStart_toEndOf="@+id/tv_question_explain_testMedium"
         app:layout_constraintTop_toBottomOf="@+id/bt_question"
         app:layout_constraintVertical_bias="0.06999999"
         app:srcCompat="@drawable/speaker_bt" />
 
     <Button
-        android:id="@+id/bt_ans1_testEasy"
+        android:id="@+id/bt_ans1_testMedium"
         android:layout_width="139dp"
         android:layout_height="66dp"
         android:background="@drawable/test_ans_bt"
@@ -55,13 +55,13 @@
         android:text="C"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans2_testEasy"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans2_testMedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/bt_ans4_testEasy"
+        android:id="@+id/bt_ans4_testMedium"
         android:layout_width="139dp"
         android:layout_height="66dp"
         android:background="@drawable/test_ans_bt"
@@ -72,12 +72,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.739"
-        app:layout_constraintStart_toEndOf="@+id/bt_ans3_testEasy"
+        app:layout_constraintStart_toEndOf="@+id/bt_ans3_testMedium"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.986" />
 
     <Button
-        android:id="@+id/bt_ans2_testEasy"
+        android:id="@+id/bt_ans2_testMedium"
         android:layout_width="139dp"
         android:layout_height="66dp"
         android:background="@drawable/test_ans_bt"
@@ -88,12 +88,12 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.739"
-        app:layout_constraintStart_toEndOf="@+id/bt_ans1_testEasy"
+        app:layout_constraintStart_toEndOf="@+id/bt_ans1_testMedium"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.865" />
 
     <Button
-        android:id="@+id/bt_ans3_testEasy"
+        android:id="@+id/bt_ans3_testMedium"
         android:layout_width="139dp"
         android:layout_height="66dp"
         android:background="@drawable/test_ans_bt"
@@ -101,13 +101,13 @@
         android:text="D"
         android:textColor="@android:color/white"
         android:textSize="36sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans4_testEasy"
+        app:layout_constraintBaseline_toBaselineOf="@+id/bt_ans4_testMedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.12"
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
-        android:id="@+id/tv_question_title_testEasy"
+        android:id="@+id/tv_question_title_testMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Question"
@@ -122,20 +122,20 @@
         app:layout_constraintVertical_bias="0.06" />
 
     <TextView
-        android:id="@+id/tv_question_num_testEasy"
+        android:id="@+id/tv_question_num_testMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="1"
         android:textColor="@android:color/white"
         android:textSize="36sp"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tv_question_title_testEasy"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tv_question_title_testMedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/tv_question_title_testEasy" />
+        app:layout_constraintStart_toEndOf="@+id/tv_question_title_testMedium" />
 
     <ImageView
-        android:id="@+id/img_hint_Item_testEasy"
+        android:id="@+id/img_hint_Item_testMedium"
         android:layout_width="242dp"
         android:layout_height="218dp"
         android:clickable="true"
@@ -148,7 +148,7 @@
         app:srcCompat="@drawable/apple" />
 
     <TextView
-        android:id="@+id/tv_question_testEasy"
+        android:id="@+id/tv_question_testMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
@@ -158,7 +158,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/bt_question"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/img_hint_Item_testEasy"
+        app:layout_constraintTop_toBottomOf="@+id/img_hint_Item_testMedium"
         app:layout_constraintVertical_bias="0.197" />
 
     <ImageView
@@ -167,7 +167,7 @@
         android:layout_height="28dp"
         android:onClick="back"
         app:layout_constraintBottom_toBottomOf="@+id/bt_question"
-        app:layout_constraintEnd_toStartOf="@+id/tv_question_title_testEasy"
+        app:layout_constraintEnd_toStartOf="@+id/tv_question_title_testMedium"
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

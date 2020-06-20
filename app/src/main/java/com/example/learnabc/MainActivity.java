@@ -8,12 +8,15 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class MainActivity extends AppCompatActivity {
     TextView tv_player;
-    static PlayerDetails player1 =new PlayerDetails("",0);
-    static PlayerDetails player2 =new PlayerDetails("",0);
-    static PlayerDetails player3 =new PlayerDetails("",0);
-    static PlayerDetails player4 =new PlayerDetails("",0);
+    static PlayerDetails player1 =new PlayerDetails("",0,0,0);
+    static PlayerDetails player2 =new PlayerDetails("",0,0,0);
+    static PlayerDetails player3 =new PlayerDetails("",0,0,0);
+    static PlayerDetails player4 =new PlayerDetails("",0,0,0);
     static int currerntPlayer=1;
 
     @Override
@@ -33,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         else if (currerntPlayer==4){
             tv_player.setText("Player 4");
         }
+
     }
 
 
@@ -84,7 +88,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void scoreBoard(View view){
-        startActivity(new Intent(this,ScoreBoard.class));
+        startActivity(new Intent(this,ScoreBoard_level.class));
     }
 
     public static int getCurrerntPlayer(){
